@@ -1,0 +1,95 @@
+// -*- mode: jsonc -*-
+{
+    "height": 0,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 5, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "clock",
+        "disk",
+        "pulseaudio",
+        "backlight",
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "network",
+        "cpu",
+        "memory",
+        "tray",
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰼏",
+            "2": "󰼐",
+            "3": "󰼑",
+            "4": "󰼒",
+            "5": "󰼓",
+            "6": "󰼔",
+            "7": "󰼕",
+            "8": "󰼖",
+            "9": "󰼗",
+            "10": "󰿪",
+        },
+        "persistent-workspaces": {
+            "*" : 10,
+        },
+    },
+    "disk": {
+        "tooltip": false,
+        "format": "{percentage_used}% used 󱛟",
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10,
+    },
+    "clock": {
+        "tooltip": false,
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "backlight": {
+        "tooltip": false,
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰌶", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
+    },
+
+    "network": {
+        "format-wifi": "{ipaddr} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip": false,
+        "format-disconnected": "Disconnected ⚠",
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋 ",
+            "headset": "󰋎 ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+}

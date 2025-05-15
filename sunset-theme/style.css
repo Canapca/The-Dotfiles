@@ -1,0 +1,157 @@
+* {
+font-family: Symbols Nerd Font, White Rabbit;
+}
+window#waybar {
+	background-color: rgba(5, 5, 0, 0.4);
+	border: 2px solid rgba(15, 0, 45, 0.3);
+	border-radius: 8px;
+	color: #ffffff;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+button {
+	box-shadow: inset 0 0px transparent;
+	border: none;
+	border-radius: 1px;
+}
+
+button:hover {
+	background: inherit;
+	box-shadow: inset 0 -1px rgba(255, 255, 255, 0.5);
+}
+
+#pulseaudio:hover {
+background-color: rgba(245, 245, 245, 0.1);
+box-shadow: inset 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	color: white;
+}
+
+#workspaces button {
+font-weight: normal;
+font-size: 24px;
+padding: 0 10px;
+text-shadow: 1px 3px 8px black;
+background-color: transparent;
+color: rgba(255, 255, 255, 0.5);
+}
+
+#workspaces button:hover {
+border-radius:8px;
+background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.empty {
+color: rgba(225, 200, 255, 0.3)
+}
+
+#workspaces button.focused {
+background-color: #64727D;
+box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+background-color: #eb4d4b;
+}
+
+/*Customisations for color A elements*/
+#clock,
+#pulseaudio,
+#cpu,
+#tray {
+background-color:rgba(255, 200, 0, 0.3);
+}
+
+/*Custmisations for color B elements*/
+#backlight,
+#network,
+#disk,
+#memory {
+background-color:rgba(0, 100, 255, 0.3);
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad {
+border-radius: 8px;
+font-size: 21px;
+padding: 0 10px;
+color: rgba(255, 255, 255, 0.9);
+margin-bottom:8px;
+margin-top:8px;
+border: 3px solid rgba(100, 100, 100, 0.5);
+text-shadow:3px 3px 0px black, -1px -1px 3px black;
+}
+
+#window,
+#workspaces {
+margin: 0 4px;
+}
+
+#clock {
+margin-left: 8px;
+font-weight: bold;
+}
+
+@keyframes blink {
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#network.disconnected {
+background-color: #f53c3c;
+}
+
+#pulseaudio.muted {
+background-color: rgba(55, 55, 55, 1);
+color: #2a5c45;
+}
+
+#wireplumber {
+background-color: #fff0f5;
+color: #000000;
+}
+
+#wireplumber.muted {
+background-color: #f53c3c;
+}
+
+#tray {
+margin-right: 8px;
+}
+
+#tray > .passive {
+-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+-gtk-icon-effect: highlight;
+background-color: #eb4d4b;
+}
+
+.modules-right > widget:last-child > #memory {
+	margin-right: 8px;
+}
